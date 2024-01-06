@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34414.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bit.Bswup.Demo", "Bit.Bswup.Demo\Bit.Bswup.Demo.csproj", "{ECEC5324-D1A7-419A-A3AD-F770EADEE78C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bit.Bswup.Demo.Client", "Bit.Bswup.Demo.Client\Bit.Bswup.Demo.Client.csproj", "{F2BDDEE2-052D-4897-A940-B9BFFBB86A18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECEC5324-D1A7-419A-A3AD-F770EADEE78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEC5324-D1A7-419A-A3AD-F770EADEE78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEC5324-D1A7-419A-A3AD-F770EADEE78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEC5324-D1A7-419A-A3AD-F770EADEE78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BDDEE2-052D-4897-A940-B9BFFBB86A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BDDEE2-052D-4897-A940-B9BFFBB86A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BDDEE2-052D-4897-A940-B9BFFBB86A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BDDEE2-052D-4897-A940-B9BFFBB86A18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1B51607-7348-4041-ACCA-95AB85CDC3E3}
+	EndGlobalSection
+EndGlobal

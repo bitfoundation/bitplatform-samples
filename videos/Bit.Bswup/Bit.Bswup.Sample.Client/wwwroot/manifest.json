@@ -1,0 +1,45 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "any",
+  "id": "bitBswupDemo",
+  "display": "standalone",
+  "theme_color": "#2EA3FF",
+  "related_applications": [],
+  "name": "bit Bswup Demo",
+  "background_color": "#0D1117",
+  "short_name": "bit Bswup Demo",
+  "prefer_related_applications": false,
+  "display_override": [ "window-controls-overlay" ],
+  "description": "bit Bswup Demo",
+  "features": [
+    "fast",
+    "simple"
+  ],
+  "categories": [
+    "utilities"
+  ],
+  "icons": [
+    {
+      "sizes": "512x512",
+      "type": "image/png",
+      "src": "images/icons/bit-icon-512.png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Counter",
+      "url": "/counter"
+    },
+    {
+      "name": "Weather",
+      "url": "/weather"
+    }
+  ]
+}

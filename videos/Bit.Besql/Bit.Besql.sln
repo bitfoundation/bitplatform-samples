@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34321.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Besql.Demo", "..\..\..\bitplatform\src\Besql\Demo\Bit.Besql.Demo\Bit.Besql.Demo.csproj", "{A5BC578F-EB02-4D2C-B213-FC98A80D98BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Besql.Demo.Client", "..\..\..\bitplatform\src\Besql\Demo\Bit.Besql.Demo.Client\Bit.Besql.Demo.Client.csproj", "{7F0EA251-A880-46E4-B0ED-B7DF6BC79100}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5BC578F-EB02-4D2C-B213-FC98A80D98BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BC578F-EB02-4D2C-B213-FC98A80D98BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BC578F-EB02-4D2C-B213-FC98A80D98BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BC578F-EB02-4D2C-B213-FC98A80D98BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0EA251-A880-46E4-B0ED-B7DF6BC79100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0EA251-A880-46E4-B0ED-B7DF6BC79100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0EA251-A880-46E4-B0ED-B7DF6BC79100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0EA251-A880-46E4-B0ED-B7DF6BC79100}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4474E62-EBBF-4C5C-B256-EDA41E47EDC3}
+	EndGlobalSection
+EndGlobal
