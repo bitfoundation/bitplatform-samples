@@ -1,5 +1,5 @@
-using Bit.Bswup.Demo.Client.Pages;
-using Bit.Bswup.Demo.Components;
+using Bit.Bswup.Sample.Client.Pages;
+using Bit.Bswup.Sample.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +24,20 @@ else
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        if (builder.Environment.IsDevelopment() is false)
+        {
+            ctx.Context.Response.GetTypedHeaders().CacheControl = new()
+            {
+                MaxAge = TimeSpan.FromDays(7),
+                Public = true
+            };
+        }
+    }
+});
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()

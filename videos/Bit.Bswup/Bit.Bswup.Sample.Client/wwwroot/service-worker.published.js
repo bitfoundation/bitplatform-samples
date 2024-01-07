@@ -1,11 +1,14 @@
 self.assetsInclude = [];
 self.assetsExclude = [
-    /Bit\.Bswup\.Demo\.Client\.styles\.css$/ // .NET 8 assets issue
+    /Bit\.Bswup\.Sample\.Client\.styles\.css$/ // .NET 8 assets issue
 ];
 
 self.externalAssets = [
     {
         "url": "/"
+    },
+    {
+        url: "_framework/blazor.web.js"
     }
 ];
 
