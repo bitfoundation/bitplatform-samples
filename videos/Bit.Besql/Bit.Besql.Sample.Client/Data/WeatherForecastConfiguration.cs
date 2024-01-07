@@ -1,8 +1,8 @@
-﻿using Bit.Besql.Demo.Client.Model;
+﻿using Bit.Besql.Sample.Client.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Bit.Besql.Demo.Client.Data;
+namespace Bit.Besql.Sample.Client.Data;
 
 public class WeatherForecastConfiguration : IEntityTypeConfiguration<WeatherForecast>
 {
