@@ -15,7 +15,7 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Bit.Bswup" Version="8.7.0-pre-05" />
+		<PackageReference Include="Bit.Bswup" Version="8.7.0" />
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
 
