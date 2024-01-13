@@ -4,30 +4,28 @@ namespace Bit.Tutorial07.Server.Controllers.Sample;
 
 [Route("api/[controller]/[action]")]
 [ApiController]
-public partial class CategoryController(AppDbContext dbContext) : ControllerBase
+public partial class CategoryController : AppControllerBase
 {
     [HttpGet]
-    public async Task<CategoryDto[]> Get()
+    public IQueryable<CategoryDto> Get()
     {
-        return await dbContext.Categories
-            .Project()
-            .ToArrayAsync();
+        return DbContext.Categories
+            .Project();
+    }
 
-        return await dbContext.Categories
-            .Select(c => new CategoryDto
-            {
-                Id = c.Id,
-                Name = c.Name,
-                Color = c.Color,
-                ProductsCount = c.Products.Count
-            })
-            .ToArrayAsync();
+    [HttpGet, EnableQuery]
+    public IQueryable<CategoryDto> GetNonEmptyCategories()
+    {
+        return DbContext
+            .Categories
+            .Where(c => c.Products.Any())
+            .Project();
     }
 
     [HttpGet("{id}")]
     public async Task<CategoryDto> Get(int id)
     {
-        return await dbContext.Categories
+        return await DbContext.Categories
             .Project()
             .FirstOrDefaultAsync(p => p.Id == id);
     }
@@ -37,9 +35,9 @@ public partial class CategoryController(AppDbContext dbContext) : ControllerBase
     {
         var entityToAdd = dto.Map();
 
-        await dbContext.Categories.AddAsync(entityToAdd);
+        await DbContext.Categories.AddAsync(entityToAdd);
 
-        await dbContext.SaveChangesAsync();
+        await DbContext.SaveChangesAsync();
 
         return entityToAdd.Map();
     }
@@ -47,20 +45,20 @@ public partial class CategoryController(AppDbContext dbContext) : ControllerBase
     [HttpPut]
     public async Task<CategoryDto> Update(CategoryDto dto)
     {
-        var entityToUpdate = await dbContext.Categories.FirstOrDefaultAsync(t => t.Id == dto.Id);
+        var entityToUpdate = await DbContext.Categories.FirstOrDefaultAsync(t => t.Id == dto.Id);
 
         dto.Patch(entityToUpdate);
 
-        await dbContext.SaveChangesAsync();
+        await DbContext.SaveChangesAsync();
 
         return entityToUpdate.Map();
 
         /*
         var entityToUpdate = dto.Map();
           
-        dbContext.Update(entityToUpdate);
+        DbContext.Update(entityToUpdate);
 
-        await dbContext.SaveChangesAsync();
+        await DbContext.SaveChangesAsync();
         
         return entityToUpdate.Map();
         */
@@ -69,8 +67,8 @@ public partial class CategoryController(AppDbContext dbContext) : ControllerBase
     [HttpDelete("{id}")]
     public async Task Delete(int id)
     {
-        dbContext.Categories.Remove(new() { Id = id });
+        DbContext.Categories.Remove(new() { Id = id });
 
-        await dbContext.SaveChangesAsync();
+        await DbContext.SaveChangesAsync();
     }
 }
