@@ -1,4 +1,32 @@
-// In development, always fetch from the network and do not enable offline support.
-// This is because caching would make development more difficult (changes would not
-// be reflected on the first load after each change).
-self.addEventListener('fetch', () => { });
+self.assetsInclude = [];
+self.assetsExclude = [
+    /Bit\.Bswup\.Sample\.Client\.styles\.css$/ // .NET 8 assets issue
+];
+
+self.externalAssets = [
+    {
+        "url": "/"
+    },
+    {
+        url: "_framework/blazor.web.js"
+    }
+];
+
+self.serverHandledUrls = [
+    /\/api\//,
+    /\/odata\//,
+    /\/jobs\//,
+    /\/core\//,
+    /\/signalr\//,
+    /\/healthchecks-ui/,
+    /\/healthz/,
+    /\/swagger/
+];
+
+self.defaultUrl = "/";
+self.caseInsensitiveUrl = true;
+self.noPrerenderQuery = 'no-prerender=true';
+self.isPassive = self.disablePassiveFirstBoot = true;
+self.errorTolerance = 'lax';
+
+self.importScripts('_content/Bit.Bswup/bit-bswup.sw.js');
