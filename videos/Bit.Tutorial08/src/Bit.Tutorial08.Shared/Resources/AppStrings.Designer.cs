@@ -88,24 +88,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New category.
-        /// </summary>
-        public static string AddCategory {
-            get {
-                return ResourceManager.GetString("AddCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add product.
-        /// </summary>
-        public static string AddProduct {
-            get {
-                return ResourceManager.GetString("AddProduct", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string All {
@@ -142,24 +124,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete category {0}.
-        /// </summary>
-        public static string AreYouSureWannaDeleteCategory {
-            get {
-                return ResourceManager.GetString("AreYouSureWannaDeleteCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete product {0}.
-        /// </summary>
-        public static string AreYouSureWannaDeleteProduct {
-            get {
-                return ResourceManager.GetString("AreYouSureWannaDeleteProduct", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         public static string Back {
@@ -192,51 +156,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Categories.
-        /// </summary>
-        public static string Categories {
-            get {
-                return ResourceManager.GetString("Categories", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Categories.
-        /// </summary>
-        public static string CategoriesPageTitle {
-            get {
-                return ResourceManager.GetString("CategoriesPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Category.
-        /// </summary>
-        public static string Category {
-            get {
-                return ResourceManager.GetString("Category", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Category entity could not be found.
-        /// </summary>
-        public static string CategoryCouldNotBeFound {
-            get {
-                return ResourceManager.GetString("CategoryCouldNotBeFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This category contain some products, so you can&apos;t delete it.
-        /// </summary>
-        public static string CategoryNotEmpty {
-            get {
-                return ResourceManager.GetString("CategoryNotEmpty", resourceCulture);
             }
         }
         
@@ -323,29 +242,11 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dashboard.
-        /// </summary>
-        public static string Dashboard {
-            get {
-                return ResourceManager.GetString("Dashboard", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Default color picker.
-        /// </summary>
-        public static string DefaultColorPicker {
-            get {
-                return ResourceManager.GetString("DefaultColorPicker", resourceCulture);
             }
         }
         
@@ -373,33 +274,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         public static string DeleteAccountPrompt {
             get {
                 return ResourceManager.GetString("DeleteAccountPrompt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete category.
-        /// </summary>
-        public static string DeleteCategory {
-            get {
-                return ResourceManager.GetString("DeleteCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete product.
-        /// </summary>
-        public static string DeleteProduct {
-            get {
-                return ResourceManager.GetString("DeleteProduct", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete todo item.
-        /// </summary>
-        public static string DeleteTodoItem {
-            get {
-                return ResourceManager.GetString("DeleteTodoItem", resourceCulture);
             }
         }
         
@@ -436,24 +310,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Edit category.
-        /// </summary>
-        public static string EditCategory {
-            get {
-                return ResourceManager.GetString("EditCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Edit product.
-        /// </summary>
-        public static string EditProduct {
-            get {
-                return ResourceManager.GetString("EditProduct", resourceCulture);
             }
         }
         
@@ -517,24 +373,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         public static string EmailConfirmedSuccessfullyMessage {
             get {
                 return ResourceManager.GetString("EmailConfirmedSuccessfullyMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter category name.
-        /// </summary>
-        public static string EnterCategoryName {
-            get {
-                return ResourceManager.GetString("EnterCategoryName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter product name.
-        /// </summary>
-        public static string EnterProductName {
-            get {
-                return ResourceManager.GetString("EnterProductName", resourceCulture);
             }
         }
         
@@ -710,24 +548,6 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Last 30 days category count.
-        /// </summary>
-        public static string Last30DaysCategoryCount {
-            get {
-                return ResourceManager.GetString("Last30DaysCategoryCount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last 30 days product count.
-        /// </summary>
-        public static string Last30DaysProductCount {
-            get {
-                return ResourceManager.GetString("Last30DaysProductCount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to MaxLengthAttribute must have a Length value that is greater than zero. Use MaxLength() without parameters to indicate that the string or array can have the maximum allowable length..
         /// </summary>
         public static string MaxLengthAttribute_InvalidMaxLength {
@@ -773,29 +593,11 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No todos yet.
-        /// </summary>
-        public static string NoTodos {
-            get {
-                return ResourceManager.GetString("NoTodos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Haven’t you received the confirmation email?.
         /// </summary>
         public static string NotReceivedConfirmationEmailMessage {
             get {
                 return ResourceManager.GetString("NotReceivedConfirmationEmailMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Offline Edit profile.
-        /// </summary>
-        public static string OfflineEditProfileTitle {
-            get {
-                return ResourceManager.GetString("OfflineEditProfileTitle", resourceCulture);
             }
         }
         
@@ -836,101 +638,11 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product category.
-        /// </summary>
-        public static string ProductCategory {
-            get {
-                return ResourceManager.GetString("ProductCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Product entity could not be found.
+        ///   Looks up a localized string similar to Product could not be found.
         /// </summary>
         public static string ProductCouldNotBeFound {
             get {
                 return ResourceManager.GetString("ProductCouldNotBeFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products.
-        /// </summary>
-        public static string Products {
-            get {
-                return ResourceManager.GetString("Products", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Product sales.
-        /// </summary>
-        public static string ProductSales {
-            get {
-                return ResourceManager.GetString("ProductSales", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This chart shows the sale number of each product..
-        /// </summary>
-        public static string ProductSalesText {
-            get {
-                return ResourceManager.GetString("ProductSalesText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products count.
-        /// </summary>
-        public static string ProductsCount {
-            get {
-                return ResourceManager.GetString("ProductsCount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products count per category chart.
-        /// </summary>
-        public static string ProductsCountPerCategoryChart {
-            get {
-                return ResourceManager.GetString("ProductsCountPerCategoryChart", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This chart shows the number of products in each category..
-        /// </summary>
-        public static string ProductsCountPerCategoryChartText {
-            get {
-                return ResourceManager.GetString("ProductsCountPerCategoryChartText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products.
-        /// </summary>
-        public static string ProductsPageTitle {
-            get {
-                return ResourceManager.GetString("ProductsPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products percentage per category.
-        /// </summary>
-        public static string ProductsPercentagePerCategory {
-            get {
-                return ResourceManager.GetString("ProductsPercentagePerCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This chart shows the percentage of products in each category..
-        /// </summary>
-        public static string ProductsPercentagePerCategoryText {
-            get {
-                return ResourceManager.GetString("ProductsPercentagePerCategoryText", resourceCulture);
             }
         }
         
@@ -1070,29 +782,11 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search on name.
-        /// </summary>
-        public static string SearchOnName {
-            get {
-                return ResourceManager.GetString("SearchOnName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Select your birth date.
         /// </summary>
         public static string SelectBirthDate {
             get {
                 return ResourceManager.GetString("SelectBirthDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select category.
-        /// </summary>
-        public static string SelectCategory {
-            get {
-                return ResourceManager.GetString("SelectCategory", resourceCulture);
             }
         }
         
@@ -1214,65 +908,11 @@ namespace Bit.Tutorial08.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add a todo.
-        /// </summary>
-        public static string TodoAddPlaceholder {
-            get {
-                return ResourceManager.GetString("TodoAddPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Todo item could not be found.
-        /// </summary>
-        public static string ToDoItemCouldNotBeFound {
-            get {
-                return ResourceManager.GetString("ToDoItemCouldNotBeFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Search some todo....
-        /// </summary>
-        public static string TodoSearchPlaceholder {
-            get {
-                return ResourceManager.GetString("TodoSearchPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Todo.
-        /// </summary>
-        public static string TodoTitle {
-            get {
-                return ResourceManager.GetString("TodoTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Too many requests.
         /// </summary>
         public static string TooManyRequestsExceptions {
             get {
                 return ResourceManager.GetString("TooManyRequestsExceptions", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total categories.
-        /// </summary>
-        public static string TotalCategories {
-            get {
-                return ResourceManager.GetString("TotalCategories", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total products.
-        /// </summary>
-        public static string TotalProducts {
-            get {
-                return ResourceManager.GetString("TotalProducts", resourceCulture);
             }
         }
         

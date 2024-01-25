@@ -8,6 +8,7 @@ public class CultureInfoManager
         ("English US", "en-US"),
         ("English UK", "en-GB"),
         ("Française", "fr-FR"),
+        ("Dutch", "nl-NL"),
         // ("فارسی", "fa-IR"), // To add more languages, you've to provide resx files. You might also put some efforts to change your app flow direction based on CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft
     ];
 
@@ -15,9 +16,9 @@ public class CultureInfoManager
     {
         var cultureInfo = OperatingSystem.IsBrowser() ? CultureInfo.CreateSpecificCulture(cultureInfoId) : new CultureInfo(cultureInfoId);
 
-        if (cultureInfoId == "fa-IR")
+        if (cultureInfoId is "nl-NL")
         {
-            CustomizeCultureInfoForFaCulture(cultureInfo);
+            cultureInfo.NumberFormat.NumberDecimalSeparator = "." /* Default NumberDecimalSeparator for Dutch culture info is , */;
         }
 
         return cultureInfo;

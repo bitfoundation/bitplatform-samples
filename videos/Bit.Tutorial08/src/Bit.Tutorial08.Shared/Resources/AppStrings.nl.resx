@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,331 +118,331 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CompareAttribute_ValidationError" xml:space="preserve">
-    <value>'{0}' and '{1}' do not match.</value>
+    <value>'{0}' en '{1}' komen niet overeen.</value>
   </data>
   <data name="EmailAddressAttribute_ValidationError" xml:space="preserve">
-    <value>The {0} field is not a valid e-mail address.</value>
+    <value>Het veld {0} is geen geldig e-mailadres.</value>
   </data>
   <data name="MaxLengthAttribute_InvalidMaxLength" xml:space="preserve">
-    <value>MaxLengthAttribute must have a Length value that is greater than zero. Use MaxLength() without parameters to indicate that the string or array can have the maximum allowable length.</value>
+    <value>MaxLengthAttribute moet een waarde voor Length hebben die groter is dan nul. Gebruik MaxLength() zonder parameters om aan te geven dat de tekenreeks of matrix de maximaal toegestane lengte kan hebben.</value>
   </data>
   <data name="MinLengthAttribute_ValidationError" xml:space="preserve">
-    <value>The field {0} must be a string or array type with a minimum length of '{1}'.</value>
+    <value>Het veld {0} moet een tekenreeks- of matrixtype zijn met een minimale lengte van '{1}'.</value>
   </data>
   <data name="RangeAttribute_ValidationError" xml:space="preserve">
-    <value>The field {0} must be between {1} and {2}.</value>
+    <value>Het veld {0} moet tussen {1} en {2} liggen.</value>
   </data>
   <data name="RequiredAttribute_ValidationError" xml:space="preserve">
-    <value>The {0} field is required.</value>
+    <value>Het veld {0} is verplicht.</value>
   </data>
   <data name="BadRequestException" xml:space="preserve">
-    <value>Invalid request</value>
+    <value>Ongeldig verzoek</value>
   </data>
   <data name="ConflictException" xml:space="preserve">
-    <value>Request could not be processed because of conflict in the request</value>
+    <value>Aanvraag kan niet worden verwerkt vanwege een conflict in de aanvraag</value>
   </data>
   <data name="ForbiddenException" xml:space="preserve">
-    <value>Access to the requested resource is forbidden</value>
+    <value>Toegang tot de gevraagde bron is verboden</value>
   </data>
   <data name="ResourceValidationException" xml:space="preserve">
-    <value>Request data is not valid</value>
+    <value>Aanvraaggegevens zijn niet geldig</value>
   </data>
   <data name="RestException" xml:space="preserve">
-    <value>An error occurred while communicating with server</value>
+    <value>Er is een fout opgetreden tijdens de communicatie met de server</value>
   </data>
   <data name="UnauthorizedException" xml:space="preserve">
-    <value>Your request lacks valid authentication credentials</value>
+    <value>Uw aanvraag bevat geen geldige verificatiegegevens</value>
   </data>
   <data name="UnknownException" xml:space="preserve">
-    <value>Unknown error has occurred</value>
+    <value>Er is een onbekende fout opgetreden</value>
   </data>
   <data name="UpdateConcurrencyException" xml:space="preserve">
-    <value>The record was modified by another user after you got the original data. the operation was canceled.</value>
+    <value>De record is gewijzigd door een andere gebruiker nadat u de oorspronkelijke gegevens hebt ontvangen. De operatie is geannuleerd.</value>
   </data>
   <data name="ResourceNotFoundException" xml:space="preserve">
-    <value>Resource not found</value>
+    <value>Bron niet gevonden</value>
   </data>
   <data name="TooManyRequestsExceptions" xml:space="preserve">
-    <value>Too many requests</value>
+    <value>Te veel aanvragen</value>
   </data>
   <data name="ServerConnectionException" xml:space="preserve">
-    <value>Unable to connect to server.</value>
+    <value>Kan geen verbinding maken met de server.</value>
   </data>
   <data name="Active" xml:space="preserve">
-    <value>Active</value>
+    <value>Actief</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>All</value>
+    <value>Alle</value>
   </data>
   <data name="Alphabetical" xml:space="preserve">
-    <value>Alphabetical</value>
+    <value>Alfabetisch</value>
   </data>
   <data name="Completed" xml:space="preserve">
-    <value>Completed</value>
+    <value>Volbracht</value>
   </data>
   <data name="Date" xml:space="preserve">
-    <value>Date</value>
+    <value>Datum</value>
   </data>
   <data name="EditProfileTitle" xml:space="preserve">
-    <value>Edit profile</value>
+    <value>Profiel bewerken</value>
   </data>
   <data name="FullName" xml:space="preserve">
-    <value>FullName</value>
+    <value>Volledige naam</value>
   </data>
   <data name="TermsTitle" xml:space="preserve">
-    <value>Terms</value>
+    <value>Voorwaarde</value>
   </data>
   <data name="ProfileUpdatedSuccessfullyMessage" xml:space="preserve">
-    <value>Profile updated successfully.</value>
+    <value>Profiel succesvol bijgewerkt.</value>
   </data>
   <data name="ConfirmNewPassword" xml:space="preserve">
-    <value>Confirm New Password</value>
+    <value>Bevestig nieuw wachtwoord</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>E-mail</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Wachtwoord</value>
   </data>
   <data name="PasswordChangedSuccessfullyMessage" xml:space="preserve">
-    <value>Your password changed successfully.</value>
+    <value>Uw wachtwoord is met succes gewijzigd.</value>
   </data>
   <data name="ResendConfirmationLinkMessage" xml:space="preserve">
-    <value>The confirmation link has been re-sent to your email address.</value>
+    <value>De bevestigingslink is opnieuw naar uw e-mailadres verzonden.</value>
   </data>
   <data name="ResetPasswordLinkSentMessage" xml:space="preserve">
-    <value>The reset password link has been sent to your email address.</value>
+    <value>De link voor het opnieuw instellen van het wachtwoord is naar uw e-mailadres verzonden.</value>
   </data>
   <data name="UserImageCouldNotBeFound" xml:space="preserve">
-    <value>User image could not be found</value>
+    <value>Gebruikersafbeelding kan niet worden gevonden</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Fout</value>
   </data>
   <data name="WaitForResetPasswordEmailResendDelay" xml:space="preserve">
-    <value>You have already requested the reset password email. Try again in {0}</value>
+    <value>U hebt de e-mail voor het opnieuw instellen van het wachtwoord al aangevraagd. Probeer het opnieuw in {0}</value>
   </data>
   <data name="TermsAccepted" xml:space="preserve">
-    <value>Is accept terms?</value>
+    <value>Zijn accepte voorwaarden?</value>
   </data>
   <data name="YouHaveToAcceptTerms" xml:space="preserve">
-    <value>You must agree to our terms.</value>
+    <value>U moet akkoord gaan met onze voorwaarden.</value>
   </data>
   <data name="Gender" xml:space="preserve">
-    <value>Gender</value>
+    <value>Geslacht</value>
   </data>
   <data name="BirthDate" xml:space="preserve">
-    <value>Birthdate</value>
+    <value>Geboortedatum</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Naam</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Description</value>
+    <value>Omschrijving: __________</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Price</value>
+    <value>Prijs</value>
   </data>
   <data name="YouNeedToSignIn" xml:space="preserve">
-    <value>You must be signed in to continue.</value>
+    <value>U moet ingelogd zijn om door te gaan.</value>
   </data>
   <data name="InvalidUsernameOrPassword" xml:space="preserve">
-    <value>Invalid username or password</value>
+    <value>Ongeldige gebruikersnaam of wachtwoord</value>
   </data>
   <data name="WaitForConfirmationEmailResendDelay" xml:space="preserve">
-    <value>You have already requested the confirmation email. Try again in {0}</value>
+    <value>Je hebt de bevestigingsmail al aangevraagd. Probeer het opnieuw in {0}</value>
   </data>
   <data name="EmailAlreadyConfirmed" xml:space="preserve">
-    <value>Your email is already confirmed.</value>
+    <value>Uw e-mail is al bevestigd.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Title</value>
+    <value>Titel</value>
   </data>
   <data name="AreYouSureWannaDelete" xml:space="preserve">
-    <value>Are you sure you want to delete {0}</value>
+    <value>Weet je zeker dat je {0} wilt verwijderen?</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Thuis</value>
   </data>
   <data name="UserLockedOut" xml:space="preserve">
-    <value>User is locked out. Try again in {0}</value>
+    <value>De gebruiker is buitengesloten. Probeer het opnieuw in {0}</value>
   </data>
   <data name="UserNameNotFound" xml:space="preserve">
-    <value>User {0} does not exist.</value>
+    <value>Gebruiker {0} bestaat niet.</value>
   </data>
   <data name="DuplicateEmail" xml:space="preserve">
-    <value>Email '{0}' is already taken.</value>
+    <value>E-mail '{0}' is al in gebruik.</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>Toevoegen</value>
   </data>
   <data name="AlreadyHaveAccountMessage" xml:space="preserve">
-    <value>Already have an account?</value>
+    <value>Heb je al een account?</value>
   </data>
   <data name="ConfirmEmailMessage" xml:space="preserve">
-    <value>We have sent a confirmation link to your email address.
-Please confirm your email by clicking on the link.</value>
+    <value>We hebben een bevestigingslink naar uw e-mailadres gestuurd.
+Bevestig uw e-mail door op de link te klikken.</value>
   </data>
   <data name="ConfirmEmailTitle" xml:space="preserve">
-    <value>Confirm Your Email Address</value>
+    <value>Bevestig je e-mailadres</value>
   </data>
   <data name="DeleteAccount" xml:space="preserve">
-    <value>Delete Account</value>
+    <value>Account verwijderen</value>
   </data>
   <data name="DeleteAccountPrompt" xml:space="preserve">
-    <value>Are you sure you want to delete your account?</value>
+    <value>Weet je zeker dat je je account wilt verwijderen?</value>
   </data>
   <data name="DontHaveAccountMessage" xml:space="preserve">
-    <value>Don’t have an account?</value>
+    <value>Heb je nog geen account?</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Bewerken</value>
   </data>
   <data name="EmailConfirmationFailedMessage" xml:space="preserve">
-    <value>Email Confirmation Failed!</value>
+    <value>E-mailbevestiging mislukt!</value>
   </data>
   <data name="EmailConfirmationTitle" xml:space="preserve">
-    <value>Email Confirmation</value>
+    <value>Bevestiging per e-mail</value>
   </data>
   <data name="EmailConfirmedSuccessfullyMessage" xml:space="preserve">
-    <value>Email Confirmed Successfully!</value>
+    <value>E-mail succesvol bevestigd!</value>
   </data>
   <data name="FileUploadFailed" xml:space="preserve">
-    <value>An error occurred while uploading file</value>
+    <value>Er is een fout opgetreden tijdens het uploaden van het bestand</value>
   </data>
   <data name="ForgetPasswordMessage" xml:space="preserve">
-    <value>Please enter the email address you have been signed up with so we can send a reset password link to your email address.</value>
+    <value>Voer het e-mailadres in waarmee u zich hebt aangemeld, zodat we een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres kunnen sturen.</value>
   </data>
   <data name="ForgetPasswordTitle" xml:space="preserve">
-    <value>Forget password</value>
+    <value>Wachtwoord vergeten</value>
   </data>
   <data name="GenderMale" xml:space="preserve">
-    <value>Male</value>
+    <value>Mannelijk</value>
   </data>
   <data name="GenderOther" xml:space="preserve">
-    <value>Other</value>
+    <value>Anders __________</value>
   </data>
   <data name="GitHubRepo" xml:space="preserve">
-    <value>GitHub Repo</value>
+    <value>GitHub-opslagplaats</value>
   </data>
   <data name="GoToToday" xml:space="preserve">
-    <value>Go to today</value>
+    <value>Ga naar vandaag</value>
   </data>
   <data name="HomeMessage" xml:space="preserve">
-    <value>Create your multi-mode (WASM, Server, Hybrid, pre-rendering) Blazor app easily in the shortest time ever!</value>
+    <value>Creëer eenvoudig uw multi-mode (WASM, Server, Hybrid, pre-rendering) Blazor-app in de kortste tijd ooit!</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
-    <value>Bit.Tutorial08 Home</value>
+    <value>Bit.Tutorial08 Startpagina</value>
   </data>
   <data name="InvalidConfirmationLinkMessage" xml:space="preserve">
-    <value>Looks like the confirmation link either is invalid or has expired.</value>
+    <value>Het lijkt erop dat de bevestigingslink ongeldig is of is verlopen.</value>
   </data>
   <data name="NewPassword" xml:space="preserve">
-    <value>New Password</value>
+    <value>Nieuw wachtwoord</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Nee</value>
   </data>
   <data name="NotReceivedConfirmationEmailMessage" xml:space="preserve">
-    <value>Haven’t you received the confirmation email?</value>
+    <value>Heb je de bevestigingsmail niet ontvangen?</value>
   </data>
   <data name="Or" xml:space="preserve">
-    <value>OR</value>
+    <value>OF</value>
   </data>
   <data name="ProfileImage" xml:space="preserve">
-    <value>Profile Image</value>
+    <value>Profielafbeelding</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Remove</value>
+    <value>Verwijderen</value>
   </data>
   <data name="ResendEmail" xml:space="preserve">
-    <value>Resend email</value>
+    <value>E-mail opnieuw verzenden</value>
   </data>
   <data name="ResetPasswordTitle" xml:space="preserve">
-    <value>Reset password</value>
+    <value>Wachtwoord opnieuw instellen</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Redden</value>
   </data>
   <data name="SignInTitle" xml:space="preserve">
-    <value>Sign in</value>
+    <value>Aanmelden</value>
   </data>
   <data name="SignOut" xml:space="preserve">
-    <value>Sign out</value>
+    <value>Afmelden</value>
   </data>
   <data name="SignOutPrompt" xml:space="preserve">
-    <value>Are you sure you want to Sign out?</value>
+    <value>Weet je zeker dat je je wilt afmelden?</value>
   </data>
   <data name="SignUp" xml:space="preserve">
-    <value>Sign up</value>
+    <value>Inschrijven</value>
   </data>
   <data name="SingUpTitle" xml:space="preserve">
-    <value>Sign up</value>
+    <value>Inschrijven</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>Submit</value>
+    <value>Opslaan</value>
   </data>
   <data name="TermsMessage" xml:space="preserve">
-    <value>I agree to the</value>
+    <value>Ik ga akkoord met de</value>
   </data>
   <data name="UploadNewProfileImage" xml:space="preserve">
-    <value>Upload a new profile image</value>
+    <value>Upload een nieuwe profielafbeelding</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Ja</value>
   </data>
   <data name="SelectBirthDate" xml:space="preserve">
-    <value>Select your birth date</value>
+    <value>Selecteer je geboortedatum</value>
   </data>
   <data name="ResetPassword" xml:space="preserve">
-    <value>Reset password</value>
+    <value>Wachtwoord opnieuw instellen</value>
   </data>
   <data name="Action" xml:space="preserve">
-    <value>Action</value>
+    <value>Actie</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>Back</value>
+    <value>Terug</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuleren</value>
   </data>
   <data name="CheckSpamMailMessage" xml:space="preserve">
-    <value>Check your Spam/Junk, if you could not find it in the Inbox.</value>
+    <value>Controleer uw spam/ongewenste e-mail als u deze niet in de inbox kunt vinden.</value>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>Color</value>
+    <value>Kleur</value>
   </data>
   <data name="CustomColor" xml:space="preserve">
-    <value>Custom color</value>
+    <value>Aangepaste kleur</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Verwijderen</value>
   </data>
   <data name="Id" xml:space="preserve">
-    <value>Id</value>
+    <value>Legitimatiebewijs</value>
   </data>
   <data name="SignIn" xml:space="preserve">
-    <value>Sign in</value>
+    <value>Aanmelden</value>
   </data>
   <data name="SignInAsDifferentUser" xml:space="preserve">
-    <value>Sign in as different user</value>
+    <value>Aanmelden als andere gebruiker</value>
   </data>
   <data name="YouAreSignInAs" xml:space="preserve">
-    <value>You're sign in as</value>
+    <value>U bent ingelogd als</value>
   </data>
   <data name="ForgotPasswordLink" xml:space="preserve">
-    <value>Forgot password?</value>
+    <value>Wachtwoord vergeten?</value>
   </data>
   <data name="GenderFemale" xml:space="preserve">
-    <value>Female</value>
+    <value>Vrouwelijk</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Remember me?</value>
+    <value>Ken je mij nog?</value>
   </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>
   </data>
   <data name="ProductCouldNotBeFound" xml:space="preserve">
-    <value>Product could not be found</value>
+    <value>Product kon niet worden gevonden</value>
   </data>
 </root>
