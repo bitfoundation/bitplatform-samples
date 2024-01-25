@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompareAttribute_ValidationError" xml:space="preserve">
+    <value>'{0}' en '{1}' komen niet overeen.</value>
+  </data>
+  <data name="EmailAddressAttribute_ValidationError" xml:space="preserve">
+    <value>Het veld {0} is geen geldig e-mailadres.</value>
+  </data>
+  <data name="MaxLengthAttribute_InvalidMaxLength" xml:space="preserve">
+    <value>MaxLengthAttribute moet een waarde voor Length hebben die groter is dan nul. Gebruik MaxLength() zonder parameters om aan te geven dat de tekenreeks of matrix de maximaal toegestane lengte kan hebben.</value>
+  </data>
+  <data name="MinLengthAttribute_ValidationError" xml:space="preserve">
+    <value>Het veld {0} moet een tekenreeks- of matrixtype zijn met een minimale lengte van '{1}'.</value>
+  </data>
+  <data name="RangeAttribute_ValidationError" xml:space="preserve">
+    <value>Het veld {0} moet tussen {1} en {2} liggen.</value>
+  </data>
+  <data name="RequiredAttribute_ValidationError" xml:space="preserve">
+    <value>Het veld {0} is verplicht.</value>
+  </data>
+  <data name="BadRequestException" xml:space="preserve">
+    <value>Ongeldig verzoek</value>
+  </data>
+  <data name="ConflictException" xml:space="preserve">
+    <value>Aanvraag kan niet worden verwerkt vanwege een conflict in de aanvraag</value>
+  </data>
+  <data name="ForbiddenException" xml:space="preserve">
+    <value>Toegang tot de gevraagde bron is verboden</value>
+  </data>
+  <data name="ResourceValidationException" xml:space="preserve">
+    <value>Aanvraaggegevens zijn niet geldig</value>
+  </data>
+  <data name="RestException" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens de communicatie met de server</value>
+  </data>
+  <data name="UnauthorizedException" xml:space="preserve">
+    <value>Uw aanvraag bevat geen geldige verificatiegegevens</value>
+  </data>
+  <data name="UnknownException" xml:space="preserve">
+    <value>Er is een onbekende fout opgetreden</value>
+  </data>
+  <data name="UpdateConcurrencyException" xml:space="preserve">
+    <value>De record is gewijzigd door een andere gebruiker nadat u de oorspronkelijke gegevens hebt ontvangen. De operatie is geannuleerd.</value>
+  </data>
+  <data name="ResourceNotFoundException" xml:space="preserve">
+    <value>Bron niet gevonden</value>
+  </data>
+  <data name="TooManyRequestsExceptions" xml:space="preserve">
+    <value>Te veel aanvragen</value>
+  </data>
+  <data name="ServerConnectionException" xml:space="preserve">
+    <value>Kan geen verbinding maken met de server.</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Actief</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="Alphabetical" xml:space="preserve">
+    <value>Alfabetisch</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Volbracht</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="EditProfileTitle" xml:space="preserve">
+    <value>Profiel bewerken</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Volledige naam</value>
+  </data>
+  <data name="TermsTitle" xml:space="preserve">
+    <value>Voorwaarde</value>
+  </data>
+  <data name="ProfileUpdatedSuccessfullyMessage" xml:space="preserve">
+    <value>Profiel succesvol bijgewerkt.</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Bevestig nieuw wachtwoord</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="PasswordChangedSuccessfullyMessage" xml:space="preserve">
+    <value>Uw wachtwoord is met succes gewijzigd.</value>
+  </data>
+  <data name="ResendConfirmationLinkMessage" xml:space="preserve">
+    <value>De bevestigingslink is opnieuw naar uw e-mailadres verzonden.</value>
+  </data>
+  <data name="ResetPasswordLinkSentMessage" xml:space="preserve">
+    <value>De link voor het opnieuw instellen van het wachtwoord is naar uw e-mailadres verzonden.</value>
+  </data>
+  <data name="UserImageCouldNotBeFound" xml:space="preserve">
+    <value>Gebruikersafbeelding kan niet worden gevonden</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="WaitForResetPasswordEmailResendDelay" xml:space="preserve">
+    <value>U hebt de e-mail voor het opnieuw instellen van het wachtwoord al aangevraagd. Probeer het opnieuw in {0}</value>
+  </data>
+  <data name="TermsAccepted" xml:space="preserve">
+    <value>Zijn accepte voorwaarden?</value>
+  </data>
+  <data name="YouHaveToAcceptTerms" xml:space="preserve">
+    <value>U moet akkoord gaan met onze voorwaarden.</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Geslacht</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Geboortedatum</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Omschrijving: __________</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prijs</value>
+  </data>
+  <data name="YouNeedToSignIn" xml:space="preserve">
+    <value>U moet ingelogd zijn om door te gaan.</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Ongeldige gebruikersnaam of wachtwoord</value>
+  </data>
+  <data name="WaitForConfirmationEmailResendDelay" xml:space="preserve">
+    <value>Je hebt de bevestigingsmail al aangevraagd. Probeer het opnieuw in {0}</value>
+  </data>
+  <data name="EmailAlreadyConfirmed" xml:space="preserve">
+    <value>Uw e-mail is al bevestigd.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="AreYouSureWannaDelete" xml:space="preserve">
+    <value>Weet je zeker dat je {0} wilt verwijderen?</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Thuis</value>
+  </data>
+  <data name="UserLockedOut" xml:space="preserve">
+    <value>De gebruiker is buitengesloten. Probeer het opnieuw in {0}</value>
+  </data>
+  <data name="UserNameNotFound" xml:space="preserve">
+    <value>Gebruiker {0} bestaat niet.</value>
+  </data>
+  <data name="DuplicateEmail" xml:space="preserve">
+    <value>E-mail '{0}' is al in gebruik.</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Toevoegen</value>
+  </data>
+  <data name="AlreadyHaveAccountMessage" xml:space="preserve">
+    <value>Heb je al een account?</value>
+  </data>
+  <data name="ConfirmEmailMessage" xml:space="preserve">
+    <value>We hebben een bevestigingslink naar uw e-mailadres gestuurd.
+Bevestig uw e-mail door op de link te klikken.</value>
+  </data>
+  <data name="ConfirmEmailTitle" xml:space="preserve">
+    <value>Bevestig je e-mailadres</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Account verwijderen</value>
+  </data>
+  <data name="DeleteAccountPrompt" xml:space="preserve">
+    <value>Weet je zeker dat je je account wilt verwijderen?</value>
+  </data>
+  <data name="DontHaveAccountMessage" xml:space="preserve">
+    <value>Heb je nog geen account?</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="EmailConfirmationFailedMessage" xml:space="preserve">
+    <value>E-mailbevestiging mislukt!</value>
+  </data>
+  <data name="EmailConfirmationTitle" xml:space="preserve">
+    <value>Bevestiging per e-mail</value>
+  </data>
+  <data name="EmailConfirmedSuccessfullyMessage" xml:space="preserve">
+    <value>E-mail succesvol bevestigd!</value>
+  </data>
+  <data name="FileUploadFailed" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens het uploaden van het bestand</value>
+  </data>
+  <data name="ForgetPasswordMessage" xml:space="preserve">
+    <value>Voer het e-mailadres in waarmee u zich hebt aangemeld, zodat we een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres kunnen sturen.</value>
+  </data>
+  <data name="ForgetPasswordTitle" xml:space="preserve">
+    <value>Wachtwoord vergeten</value>
+  </data>
+  <data name="GenderMale" xml:space="preserve">
+    <value>Mannelijk</value>
+  </data>
+  <data name="GenderOther" xml:space="preserve">
+    <value>Anders __________</value>
+  </data>
+  <data name="GitHubRepo" xml:space="preserve">
+    <value>GitHub-opslagplaats</value>
+  </data>
+  <data name="GoToToday" xml:space="preserve">
+    <value>Ga naar vandaag</value>
+  </data>
+  <data name="HomeMessage" xml:space="preserve">
+    <value>Creëer eenvoudig uw multi-mode (WASM, Server, Hybrid, pre-rendering) Blazor-app in de kortste tijd ooit!</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>Bit.Tutorial08 Startpagina</value>
+  </data>
+  <data name="InvalidConfirmationLinkMessage" xml:space="preserve">
+    <value>Het lijkt erop dat de bevestigingslink ongeldig is of is verlopen.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nieuw wachtwoord</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="NotReceivedConfirmationEmailMessage" xml:space="preserve">
+    <value>Heb je de bevestigingsmail niet ontvangen?</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>OF</value>
+  </data>
+  <data name="ProfileImage" xml:space="preserve">
+    <value>Profielafbeelding</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="ResendEmail" xml:space="preserve">
+    <value>E-mail opnieuw verzenden</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Wachtwoord opnieuw instellen</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Redden</value>
+  </data>
+  <data name="SignInTitle" xml:space="preserve">
+    <value>Aanmelden</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Afmelden</value>
+  </data>
+  <data name="SignOutPrompt" xml:space="preserve">
+    <value>Weet je zeker dat je je wilt afmelden?</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Inschrijven</value>
+  </data>
+  <data name="SingUpTitle" xml:space="preserve">
+    <value>Inschrijven</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="TermsMessage" xml:space="preserve">
+    <value>Ik ga akkoord met de</value>
+  </data>
+  <data name="UploadNewProfileImage" xml:space="preserve">
+    <value>Upload een nieuwe profielafbeelding</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="SelectBirthDate" xml:space="preserve">
+    <value>Selecteer je geboortedatum</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Wachtwoord opnieuw instellen</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Actie</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Terug</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="CheckSpamMailMessage" xml:space="preserve">
+    <value>Controleer uw spam/ongewenste e-mail als u deze niet in de inbox kunt vinden.</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Kleur</value>
+  </data>
+  <data name="CustomColor" xml:space="preserve">
+    <value>Aangepaste kleur</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Legitimatiebewijs</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Aanmelden</value>
+  </data>
+  <data name="SignInAsDifferentUser" xml:space="preserve">
+    <value>Aanmelden als andere gebruiker</value>
+  </data>
+  <data name="YouAreSignInAs" xml:space="preserve">
+    <value>U bent ingelogd als</value>
+  </data>
+  <data name="ForgotPasswordLink" xml:space="preserve">
+    <value>Wachtwoord vergeten?</value>
+  </data>
+  <data name="GenderFemale" xml:space="preserve">
+    <value>Vrouwelijk</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Ken je mij nog?</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ProductCouldNotBeFound" xml:space="preserve">
+    <value>Product kon niet worden gevonden</value>
+  </data>
+</root>
