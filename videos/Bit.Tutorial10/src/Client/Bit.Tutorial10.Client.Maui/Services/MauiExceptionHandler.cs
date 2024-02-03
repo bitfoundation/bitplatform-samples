@@ -1,4 +1,6 @@
-﻿namespace Bit.Tutorial10.Client.Maui.Services;
+﻿using Microsoft.AppCenter.Crashes;
+
+namespace Bit.Tutorial10.Client.Maui.Services;
 
 /// <summary>
 /// You can easily install AppCenter, Firebase Crashlytics, and other exception tracking libraries in your Client.Maui project.
@@ -12,6 +14,9 @@ public partial class MauiExceptionHandler : ExceptionHandlerBase
         {
             return;
         }
+
+        // AppCenter
+        Crashes.TrackError(exception, parameters?.ToDictionary(p => p.Key, p => p.Value?.ToString()));
 
         base.Handle(exception, parameters);
     }
