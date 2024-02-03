@@ -1,0 +1,296 @@
+name: Bit.Tutorial10 CD
+
+# https://bitplatform.dev/templates/dev-ops
+
+env:
+  API_SERVER_ADDRESS: 'https://bp.bitplatform.dev/'
+  APP_SERVICE_NAME: 'app-service-bp-test'
+  IOS_CODE_SIGN_PROVISION: 'Bit.Tutorial10'
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+
+  build_api_blazor:
+    name: build api + blazor web
+    runs-on: ubuntu-22.04
+
+    steps:
+    
+    - name: Checkout source code
+      uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        global-json-file: global.json
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    # - name: Enable pre rendering
+    #   run:  sed -i 's/public static readonly bool PrerenderEnabled = false;/public static readonly bool PrerenderEnabled = true;/g' src/Client/Bit.Tutorial10.Client.Core/Services/AppRenderMode.cs
+        
+    - name: Update appsettings.json api server address
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'src/Client/Bit.Tutorial10.Client.Core/appsettings.json'
+      env:
+        ApiServerAddress: ${{ env.API_SERVER_ADDRESS }}
+
+    - name: Install wasm
+      run:  cd src && dotnet workload install wasm-tools wasm-experimental
+      
+    - name: Generate CSS/JS files
+      run: dotnet build src/Client/Bit.Tutorial10.Client.Core/Bit.Tutorial10.Client.Core.csproj -t:BeforeBuildTasks --no-restore
+
+    - name: Publish
+      run: dotnet publish src/Bit.Tutorial10.Server/Bit.Tutorial10.Server.csproj -c Release --self-contained -r linux-x64 -o ${{env.DOTNET_ROOT}}/server
+
+    - name: Build migrations bundle
+      run: |
+        cd src/Bit.Tutorial10.Server/ && dotnet tool restore && dotnet ef migrations bundle --self-contained -r linux-x64 --project Bit.Tutorial10.Server.csproj
+
+    - name: Upload ef migrations bundle
+      uses: actions/upload-artifact@v3
+      with:
+        name: migrations-bundle
+        path: src/Bit.Tutorial10.Server/efbundle
+
+    - name: Upload server artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: server-bundle
+        path: ${{env.DOTNET_ROOT}}/server
+
+  deploy_api_blazor:
+    name: deploy api + blazor
+    needs: build_api_blazor
+    runs-on: ubuntu-22.04
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+
+      - name: Retrieve server bundle
+        uses: actions/download-artifact@v2
+        with:
+          name: server-bundle
+
+      - name: Retrieve migrations bundle
+        uses: actions/download-artifact@v2
+        with:
+          name: migrations-bundle
+
+      - name: Update appsettings.json
+        uses: microsoft/variable-substitution@v1 
+        with:
+          files: 'appsettings.json'
+        env:
+          ConnectionStrings.SqlServerConnectionString: ${{ secrets.DB_CONNECTION_STRING }}
+          AppSettings.IdentitySettings.IdentityCertificatePassword: ${{ secrets.API_IDENTITY_CERTIFICATE_PASSWORD }}
+
+      - name: Delete IdentityCertificate.pfx
+        run: |
+            rm IdentityCertificate.pfx
+
+      - name: Extract identity certificate from env
+        uses: timheuer/base64-to-file@v1
+        with:
+            fileDir: './'
+            fileName: 'IdentityCertificate.pfx'
+            encodedString: ${{ secrets.API_IDENTITY_CERTIFICATE_FILE_BASE64 }}
+
+      - name: Run migrations
+        run: |
+            chmod +x efbundle
+            ./efbundle
+            rm efbundle
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.APP_SERVICE_NAME }}
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_APP_SERVICE_PUBLISH_PROFILE }}
+          package: .
+
+  build_blazor_hybrid_windows:
+    name: build blazor hybrid (windows)
+    runs-on: windows-2022
+  
+    steps:
+     
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        global-json-file: global.json
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+  
+    - name: Update appsettings.json api server address
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'src\Client\Bit.Tutorial10.Client.Core\appsettings.json'
+      env:
+        ApiServerAddress: ${{ env.API_SERVER_ADDRESS }}
+        WindowsUpdateSettings.FilesUrl: https://windows-bit.tutorial10.bitplatform.dev
+  
+    - name: Generate CSS/JS files
+      run: dotnet build src\Client\Bit.Tutorial10.Client.Core\Bit.Tutorial10.Client.Core.csproj -t:BeforeBuildTasks --no-restore
+
+    - name: Publish
+      run: |
+          cd src\Client\Bit.Tutorial10.Client.Windows\
+          dotnet publish Bit.Tutorial10.Client.Windows.csproj -c Release -o .\bin\publish-arm64 -r win-arm64
+          ren .\bin\publish-arm64\Bit.Tutorial10.Client.Windows.exe Bit.Tutorial10.Client.Windows-arm64.exe
+          dotnet publish Bit.Tutorial10.Client.Windows.csproj -c Release -o .\bin\publish-x86 -r win-x86
+          ren .\bin\publish-x86\Bit.Tutorial10.Client.Windows.exe Bit.Tutorial10.Client.Windows-x86.exe
+          dotnet publish Bit.Tutorial10.Client.Windows.csproj -c Release -o .\bin\publish-x64 -r win-x64
+          ren .\bin\publish-x64\Bit.Tutorial10.Client.Windows.exe Bit.Tutorial10.Client.Windows-x64.exe
+          dotnet publish Bit.Tutorial10.Client.Windows.csproj -c Release -o .\bin\publish
+          del .\bin\publish\Bit.Tutorial10.Client.Windows.exe
+          echo D | xcopy .\bin\publish-arm64 .\publish-result /s /e /h
+          echo A | xcopy .\bin\publish-x86 .\publish-result /s /e /h
+          echo A | xcopy .\bin\publish-x64 .\publish-result /s /e /h
+          echo A | xcopy .\bin\publish .\publish-result /s /e /h
+          dotnet tool restore
+          dotnet vpk pack -u Bit.Tutorial10.Client.Windows -v "${{ vars.APPLICATION_DISPLAY_VERSION }}" -p .\publish-result -e Bit.Tutorial10.Client.Windows-x86.exe -r win-x86 --framework net8.0.1-x86-desktop,webview2 --icon .\wwwroot\favicon.ico --packTitle 'Bit.Tutorial10'
+  
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: win-exe-bundle
+        path: src\Client\Bit.Tutorial10.Client.Windows\Releases
+  
+  build_blazor_hybrid_android:
+    name: build blazor hybrid (android)
+    runs-on: ubuntu-22.04
+  
+    steps:
+     
+    - name: Checkout source code
+      uses: actions/checkout@v3
+     
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        global-json-file: global.json
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+  
+    - name: Extract Android signing key from env
+      uses: timheuer/base64-to-file@v1
+      with:
+          fileDir: './src/Client/Bit.Tutorial10.Client.Maui/'
+          fileName: 'Bit.Tutorial10.keystore'
+          encodedString: ${{ secrets.ANDROID_RELEASE_KEYSTORE_FILE_BASE64 }}
+  
+    - name: Update appsettings.json api server address
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'src/Client/Bit.Tutorial10.Client.Core/appsettings.json'
+      env:
+        ApiServerAddress: ${{ env.API_SERVER_ADDRESS }}
+
+    - name: Install maui
+      run: cd src && dotnet workload install maui-android
+
+    - name: Install Android Sdk platform tools
+      run: ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_ROOT "platform-tools"
+  
+    - name: Generate CSS/JS files
+      run: dotnet build src/Client/Bit.Tutorial10.Client.Core/Bit.Tutorial10.Client.Core.csproj -t:BeforeBuildTasks --no-restore
+  
+    - name: Build aab
+      run: dotnet build src/Client/Bit.Tutorial10.Client.Maui/Bit.Tutorial10.Client.Maui.csproj -c Release -p:AndroidPackageFormat=aab -p:AndroidKeyStore=true -p:AndroidSigningKeyStore="Bit.Tutorial10.keystore" -p:AndroidSigningKeyAlias=Bit.Tutorial10 -p:AndroidSigningKeyPass="${{ secrets.ANDROID_RELEASE_KEYSTORE_PASSWORD }}" -p:AndroidSigningStorePass="${{ secrets.ANDROID_RELEASE_SIGNING_PASSWORD }}" -f net8.0-android
+  
+    - name: Build apk
+      run: dotnet build src/Client/Bit.Tutorial10.Client.Maui/Bit.Tutorial10.Client.Maui.csproj -c Release -p:AndroidKeyStore=true -p:AndroidSigningKeyStore="Bit.Tutorial10.keystore" -p:AndroidSigningKeyAlias=Bit.Tutorial10 -p:AndroidSigningKeyPass="${{ secrets.ANDROID_RELEASE_KEYSTORE_PASSWORD }}" -p:AndroidSigningStorePass="${{ secrets.ANDROID_RELEASE_SIGNING_PASSWORD }}" -f net8.0-android
+  
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: android-bundle
+        path: src/Client/Bit.Tutorial10.Client.Maui/bin/Release/net8.0-android/*-Signed.*
+
+  build_blazor_hybrid_iOS:
+    name: build blazor hybrid (iOS-macOS)
+    runs-on: macos-13
+  
+    steps:
+     
+    - name: Checkout source code
+      uses: actions/checkout@v3
+     
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        global-json-file: global.json
+
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '15'
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+  
+    - name: Update appsettings.json api server address
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'src/Client/Bit.Tutorial10.Client.Core/appsettings.json'
+      env:
+        ApiServerAddress: ${{ env.API_SERVER_ADDRESS }}
+
+    - name: Install maui
+      run: cd src && dotnet workload install maui
+  
+    - name: Extract iOS code signing certificate from env
+      uses: timheuer/base64-to-file@v1
+      with:
+          fileDir: './'
+          fileName: 'DistributionCert.p12'
+          encodedString: ${{ secrets.APPSTORE_CODE_SIGNING_CERTIFICATE_FILE_BASE64 }}
+
+    - name: Import Code-Signing Certificates
+      uses: Apple-Actions/import-codesign-certs@v1
+      with:
+        p12-filepath: './DistributionCert.p12'
+        p12-password: ${{ secrets.APPSTORE_CODE_SIGNING_CERTIFICATE_FILE_PASSWORD }}
+
+    - name: Download Apple Provisioning Profiles
+      uses: Apple-Actions/download-provisioning-profiles@v1
+      with:
+        bundle-id: 'com.bitplatform.BP.Template'
+        issuer-id: ${{ secrets.APPSTORE_API_KEY_ISSUER_ID }}
+        api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+        api-private-key: ${{ secrets.APPSTORE_API_KEY_PRIVATE_KEY }}
+
+    - name: Generate CSS/JS files
+      run: dotnet build src/Client/Bit.Tutorial10.Client.Core/Bit.Tutorial10.Client.Core.csproj -t:BeforeBuildTasks --no-restore
+  
+    - name: Build ipa
+      run: dotnet publish src/Client/Bit.Tutorial10.Client.Maui/Bit.Tutorial10.Client.Maui.csproj -p:RuntimeIdentifier=ios-arm64 -c Release -p:ArchiveOnBuild=true -p:CodesignKey="iPhone Distribution" -p:CodesignProvision="${{ env.IOS_CODE_SIGN_PROVISION }}" -p:ApplicationDisplayVersion="${{ vars.APPLICATION_DISPLAY_VERSION }}" -p:ApplicationVersion="${{ vars.APPLICATION_VERSION }}" -f net8.0-ios
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: iOS-bundle
+        path: src/Client/Bit.Tutorial10.Client.Maui/bin/release/net8.0-ios/ios-arm64/publish/*.ipa
