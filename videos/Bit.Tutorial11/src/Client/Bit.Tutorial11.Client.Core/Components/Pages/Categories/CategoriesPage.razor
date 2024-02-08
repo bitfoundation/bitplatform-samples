@@ -14,7 +14,7 @@
 
     <div class="page-row">
         <h1 class="page-title">@Localizer[nameof(AppStrings.Categories)]</h1>
-        <BitButton OnClick="CreateCategory">@Localizer[nameof(AppStrings.AddCategory)]</BitButton>
+        <BitButton OnClick="WrapHandled(CreateCategory)">@Localizer[nameof(AppStrings.AddCategory)]</BitButton>
     </div>
 
     <div class="grid">
@@ -36,7 +36,7 @@
                 </BitDataGridTemplateColumn>
                 <BitDataGridTemplateColumn Title="@Localizer[nameof(AppStrings.Action)]" Align="BitDataGridAlign.Center" Context="category">
                     <BitIconButton IconName="@BitIconName.Edit" Title="@Localizer[(nameof(AppStrings.Edit))]"
-                                   OnClick="() => EditCategory(category!)" />
+                                   OnClick="() => WrapHandled(() => EditCategory(category!))" />
                     <BitIconButton IconName="@BitIconName.Delete" Title="@Localizer[(nameof(AppStrings.Delete))]"
                                    OnClick="WrapHandled(() => DeleteCategory(category!))" />
                 </BitDataGridTemplateColumn>

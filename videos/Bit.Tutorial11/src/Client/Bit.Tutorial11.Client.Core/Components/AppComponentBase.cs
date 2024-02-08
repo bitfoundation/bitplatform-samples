@@ -34,6 +34,8 @@ public partial class AppComponentBase : ComponentBase, IDisposable
 
     [AutoInject] protected AuthenticationManager AuthenticationManager = default!;
 
+    [AutoInject] protected Butil.Console Console = default!;
+
     [CascadingParameter] public Task<AuthenticationState> AuthenticationStateTask { get; set; } = default!;
 
     private readonly CancellationTokenSource cts = new();

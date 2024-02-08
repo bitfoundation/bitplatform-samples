@@ -8,7 +8,7 @@
         <div class="modal-title">@Localizer[nameof(AppStrings.DeleteAccount)]</div>
         <div class="modal-desc">@Localizer[nameof(AppStrings.DeleteAccountPrompt)]</div>
         <div>
-            <BitButton ButtonStyle="BitButtonStyle.Primary" OnClick="DeleteAccount">@Localizer[nameof(AppStrings.Yes)]</BitButton>
+            <BitButton ButtonStyle="BitButtonStyle.Primary" OnClick="WrapHandled(DeleteAccount)">@Localizer[nameof(AppStrings.Yes)]</BitButton>
             <BitButton ButtonStyle="BitButtonStyle.Standard" OnClick="CloseModal">@Localizer[nameof(AppStrings.No)]</BitButton>
         </div>
     </div>
