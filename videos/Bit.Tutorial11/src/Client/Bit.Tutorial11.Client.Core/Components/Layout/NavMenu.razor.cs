@@ -89,15 +89,6 @@ public partial class NavMenu : IDisposable
             await InvokeAsync(StateHasChanged);
         });
 
-
-
-
-
-
-
-
-
-
         // Download the source code from the link provided in youtube video's description.
 
         #region Typical useless HttpClient usage => /-:
@@ -210,25 +201,6 @@ public partial class NavMenu : IDisposable
             }
         }
         #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         var access_token = await PrerenderStateService.GetValue(() => AuthTokenProvider.GetAccessTokenAsync());
         profileImageUrlBase = $"{Configuration.GetApiServerAddress()}api/Attachment/GetProfileImage?access_token={access_token}&file=";
