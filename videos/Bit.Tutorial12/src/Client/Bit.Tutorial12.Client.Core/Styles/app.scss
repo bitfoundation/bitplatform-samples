@@ -1,3 +1,5 @@
+// No need to ::deep here, because we are using global styles
+
 :root {
     --bit-status-bar-height: 0px;
 }
