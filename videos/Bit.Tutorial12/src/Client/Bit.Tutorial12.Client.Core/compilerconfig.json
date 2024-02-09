@@ -119,4 +119,22 @@
         "minify": { "enabled": false },
         "options": { "sourceMap": false }
     },
+    {
+        "outputFile": "Components/Pages/Samples/SamplePage1.razor.css",
+        "inputFile": "Components/Pages/Samples/SamplePage1.razor.scss",
+        "minify": { "enabled": false },
+        "options": { "sourceMap": false }
+    },
+    {
+        "outputFile": "Components/Pages/Samples/SamplePage2.razor.css",
+        "inputFile": "Components/Pages/Samples/SamplePage2.razor.scss",
+        "minify": { "enabled": false },
+        "options": { "sourceMap": false }
+    },
+    {
+        "outputFile": "Components/Pages/Samples/Test.razor.css",
+        "inputFile": "Components/Pages/Samples/Test.razor.scss",
+        "minify": { "enabled": false },
+        "options": { "sourceMap": false }
+    }
 ]
