@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "Bit.Tutorial12.sln",
+    "projects": [
+      "src\\Bit.Tutorial12.Server\\Bit.Tutorial12.Server.csproj",
+      "src\\Bit.Tutorial12.Shared\\Bit.Tutorial12.Shared.csproj",
+      "src\\Client\\Bit.Tutorial12.Client.Core\\Bit.Tutorial12.Client.Core.csproj",
+      "src\\Client\\Bit.Tutorial12.Client.Web\\Bit.Tutorial12.Client.Web.csproj"
+    ]
+  }
+}

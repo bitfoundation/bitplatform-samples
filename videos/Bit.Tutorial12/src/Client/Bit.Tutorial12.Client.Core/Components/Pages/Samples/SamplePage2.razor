@@ -1,0 +1,14 @@
+@page "/samples/sample2"
+@inherits AppComponentBase
+
+<div>
+
+    <!--
+        The parent component's scope identifier is applied to the <div> element,
+        so the browser knows to inherit styles from the parent component.
+        https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation#child-component-support
+    -->
+
+    <Test />
+    <h1>Sample 2 <br /> Red background is applied to Test's h1 as well thanks to ::deep </h1>
+</div>
