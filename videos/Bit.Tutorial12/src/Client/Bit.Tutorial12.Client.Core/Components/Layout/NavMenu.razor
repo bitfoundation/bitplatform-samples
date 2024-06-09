@@ -12,11 +12,11 @@
                     ImageUrl="@profileImageUrl"
                     Size=@BitPersonaSize.Size48
                     SecondaryText="@user.UserName"
-                    Presence="BitPersonaPresenceStatus.Online"
+                    Presence="BitPersonaPresence.Online"
                     OnImageClick=GoToEditProfile>
-            <ImageOverlayFragment>
+            <ImageOverlayTemplate>
                 <span>@Localizer[nameof(AppStrings.Edit)]</span>
-            </ImageOverlayFragment>
+            </ImageOverlayTemplate>
         </BitPersona>
         <br />
         <BitActionButton IconName="@BitIconName.SignOut" OnClick=DoSignOut>

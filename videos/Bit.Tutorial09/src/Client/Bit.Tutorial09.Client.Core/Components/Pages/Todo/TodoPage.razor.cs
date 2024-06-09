@@ -26,7 +26,7 @@ public partial class TodoPage : IDisposable
 
     protected override async Task OnInitAsync()
     {
-        _ = keyboard.Add(ButilKeyCodes.KeyF, () => _ = searchBox.FocusInput(), ButilModifiers.Ctrl);
+        _ = keyboard.Add(ButilKeyCodes.KeyF, () => _ = searchBox.FocusAsync(), ButilModifiers.Ctrl);
 
         selectedFilter = nameof(AppStrings.All);
         selectedSort = nameof(AppStrings.Alphabetical);
@@ -200,7 +200,7 @@ public partial class TodoPage : IDisposable
 
     public override void Dispose()
     {
-        keyboard.Dispose();
+        keyboard.DisposeAsync();
         base.Dispose();
     }
 }

@@ -36,15 +36,26 @@ const tryAuthorizeWithLocalData = (swagger) => {
 const overrideSwaggerAuthorizeEvent = (swagger) => {
     const originalAuthorize = swagger.authActions.authorize;
     swagger.authActions.authorize = async (args) => {
-        const result = await originalAuthorize(args);
+        originalAuthorize(args);
 
         if (!getCookie(ACCESS_TOKEN_COOKIE_NAME)) {
-            setCookie(ACCESS_TOKEN_COOKIE_NAME, result.payload.bearerAuth.value, accessTokenExpiresIn);
+            const access_token = args.bearerAuth.value;
+            const jwt = parseJwt(access_token);
+            setCookie(ACCESS_TOKEN_COOKIE_NAME, args.bearerAuth.value, parseInt(jwt.exp));
         }
 
         reloadPage(swagger);
-        return result;
     };
+}
+
+function parseJwt(token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
 }
 
 const overrideSwaggerLogoutEvent = (swagger) => {

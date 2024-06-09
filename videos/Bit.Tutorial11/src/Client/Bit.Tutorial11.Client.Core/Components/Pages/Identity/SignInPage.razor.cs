@@ -6,7 +6,7 @@ public partial class SignInPage
 {
     private bool isLoading;
     private string? signInMessage;
-    private BitMessageBarType signInMessageType;
+    private BitSeverity signInMessageType;
     private SignInRequestDto signInModel = new();
 
     [SupplyParameterFromQuery(Name = "redirect-url"), Parameter] public string? RedirectUrl { get; set; }
@@ -37,7 +37,7 @@ public partial class SignInPage
         }
         catch (KnownException e)
         {
-            signInMessageType = BitMessageBarType.Error;
+            signInMessageType = BitSeverity.Error;
 
             signInMessage = e.Message;
         }
