@@ -2,22 +2,16 @@ using Bit.Besql.Sample.Client.Data;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-
-builder.Services.AddAppServices();
-
-var app = builder.Build();
-
-// To Create database and apply migrations
-await using (var scope = app.Services.CreateAsyncScope())
+internal class Program
 {
-    // Create db context
-    await using var dbContext = await scope.ServiceProvider
-        .GetRequiredService<IDbContextFactory<OfflineDbContext>>()
-        .CreateDbContextAsync();
+    private static async Task Main(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-    // migrate database
-    await dbContext.Database.MigrateAsync();
+        builder.Services.AddAppServices();
+
+        var app = builder.Build();
+
+        await app.RunAsync();
+    }
 }
-
-await app.RunAsync();
