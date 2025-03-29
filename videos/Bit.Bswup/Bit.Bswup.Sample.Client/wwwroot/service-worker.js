@@ -28,14 +28,10 @@ self.serverHandledUrls = [
     /\/sitemap.xml/
 ];
 
-self.defaultUrl = "/";
-self.isPassive = true;
-self.errorTolerance = 'lax';
-self.caseInsensitiveUrl = true;
+self.prerenderMode = 'initial';    // Demo: https://todo.bitplatform.dev/       (Pre-Render on first site visit + No pre-rendering for the next times with offline support)
+// self.prerenderMode = 'none';    // Demo: https://adminpanel.bitplatform.dev/ (No-Prerendering + Offline support)
+// self.prerenderMode = 'always';  // Demo: https://sales.bitplatform.dev/      (Always pre-rendering without offline support. )
 
-self.noPrerenderQuery = 'no-prerender=true';
-
-// If you wish to disable pre-rendering in App.razor, comment out the following line as well.
-self.disablePassiveFirstBoot = true;
+self.enableIntegrityCheck = false;
 
 self.importScripts('_content/Bit.Bswup/bit-bswup.sw.js');

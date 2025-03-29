@@ -8,7 +8,7 @@
     var noPrerender = HttpContext.Request.Query["no-prerender"].Count > 0;
     IComponentRenderMode renderMode = noPrerender
         ? new InteractiveWebAssemblyRenderMode(prerender: false)
-        : new InteractiveAutoRenderMode(prerender: true); // Choose either InteractiveAuto, InteractiveWebAssembly or InteractiveServer with prerender true or false.
+        : new InteractiveAutoRenderMode(prerender: true); // Choose either InteractiveAutoRenderMode, InteractiveWebAssemblyRenderMode or InteractiveServerRenderMode with prerender true or false.
 }
 
 <!DOCTYPE html>
