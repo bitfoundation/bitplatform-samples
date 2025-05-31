@@ -11,21 +11,22 @@ public class WeatherForecastConfiguration : IEntityTypeConfiguration<WeatherFore
         builder.HasIndex(w => w.TemperatureC);
 
         builder
-            .HasData([new()
+            .HasData([
+                    new
                     {
                         Id = 1,
                         Date = new DateTimeOffset(2024, 1, 1, 10, 10, 10, TimeSpan.Zero),
                         TemperatureC = 30,
                         Summary = "Hot"
                     },
-                    new()
+                    new
                     {
                         Id = 2,
                         Date = new DateTimeOffset(2024, 1, 2, 10, 10, 10, TimeSpan.Zero),
                         TemperatureC = 20,
                         Summary = "Normal"
                     },
-                    new()
+                    new
                     {
                         Id = 3,
                         Date = new DateTimeOffset(2024, 1, 3, 10, 10, 10, TimeSpan.Zero),
