@@ -41,6 +41,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 app.UseAntiforgery();
 
+app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
