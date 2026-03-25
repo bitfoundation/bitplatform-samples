@@ -16,11 +16,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.5" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Bit.Bswup" Version="10.3.0" />
+		<PackageReference Include="Bit.Bswup" Version="10.4.3" />
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
 
